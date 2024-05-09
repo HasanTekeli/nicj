@@ -30,6 +30,10 @@ func (p *Products) ToJSON(w io.Writer) error {
 	return e.Encode(p)
 }
 
+func (p *Products) Validate() error {
+	return nil
+}
+
 func GetProducts() Products {
 	return productList
 }
